@@ -1,39 +1,40 @@
-# SuapApi
+# SUAP API RUBY
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/suap_api`. To experiment with that code, run `bin/console` for an interactive prompt.
+Um wrapper Ruby para acesso a [API](http://suap.ifms.edu.br/api/docs/) do [SUAP (Sistema Unificado de Administração Publica)](http://portal.ifrn.edu.br/tec-da-informacao/servicos-ti/menus/servicos/copy2_of_suap) do IFMS. Este pacote permite que você tenha acesso aos dados do SUAP na sua aplicação Ruby.
 
-TODO: Delete this and the text above, and describe your gem
+Atualmente fornece informações para:
 
-## Installation
+ - Frequências do dia
 
-Add this line to your application's Gemfile:
+## Instalação
+
+Adicione a linha abaixo em seu Gemfile e execute o bundle install:
 
 ```ruby
 gem 'suap_api'
 ```
 
-And then execute:
+## Como usar
 
-    $ bundle
+### Frequências do dia
 
-Or install it yourself as:
+```ruby
+# Return
+# "{\"frequencias_hoje\":[{\"acao\":\"E\",\"horario\":\"2017-06-14T07:14:27\"},{\"acao\":\"S\",\"horario\":\"2017-06-14T11:31:33\"},{\"acao\":\"E\",\"horario\":\"2017-06-14T12:22:32\"}],\"total_tempo_semana\":\"15h 53min 34seg\",\"total_tempo_hoje\":\"07:01:49\"}"
+#
+connection = SuapApi::Connect.new('SUAPE_VALIDO', 'SENHA')
+puts SuapApi::FrequencyOfDay.get(connection)
+```
 
-    $ gem install suap_api
+## Desenvolvimento (Como contribuir)
 
-## Usage
+Para ajudar no Desenvolvimento, clone o repositório, instale as dependências e sempre rode os testes para garantir a consistência do sistema.
 
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/suap_api.
+    $ git clone git@github.com:ifms-na/suap_api.git
+    $ cd suap_api
+    $ bundle install
+    $ USERNAME="usuario_siape" PASSWORD="suasenha_siape" rspec
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+suap_api usa a Licença MIT. Para mais detalhes https://github.com/ifms-na/suap_api/blob/master/LICENSE.txt

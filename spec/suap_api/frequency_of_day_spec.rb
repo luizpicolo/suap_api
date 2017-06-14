@@ -4,7 +4,7 @@ RSpec.describe SuapApi::FrequencyOfDay do
   describe '#get' do
 
     let(:json){
-      connection = SuapApi::Connect.new('', '')
+      connection = SuapApi::Connect.new(ENV['USERNAME'], ENV['PASSWORD'])
       SuapApi::FrequencyOfDay.get(connection)
     }
 
