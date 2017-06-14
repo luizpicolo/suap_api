@@ -15,8 +15,12 @@ Atualmente fornece informações para:
 Adicione a linha abaixo em seu Gemfile e execute o bundle install:
 
 ```ruby
-gem 'suap_api', github: 'ifms-na/suap_api'
+gem 'suap_api'
 ```
+
+ou
+
+gem install suap_api
 
 ## Como usar
 
