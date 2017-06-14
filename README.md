@@ -20,7 +20,7 @@ gem 'suap_api'
 
 ou
 
-gem install suap_api
+    gem install suap_api
 
 ## Como usar
 
