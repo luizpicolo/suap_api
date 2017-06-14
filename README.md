@@ -1,4 +1,8 @@
+![](https://raw.githubusercontent.com/ifms-na/siai-ifms-na/master/app/assets/images/logo_ifms.png?token=ABT0W4aSOnogYpUeUhFZlcp1WgNYR34Gks5Yv3kuwA%3D%3D)
+
 # SUAP API RUBY
+
+![Em Desenvolvimento](http://messages.hellobits.com/success.svg?message=Em%20Desenvolvimento)
 
 Um wrapper Ruby para acesso a [API](http://suap.ifms.edu.br/api/docs/) do [SUAP (Sistema Unificado de Administração Publica)](http://portal.ifrn.edu.br/tec-da-informacao/servicos-ti/menus/servicos/copy2_of_suap) do IFMS. Este pacote permite que você tenha acesso aos dados do SUAP na sua aplicação Ruby.
 
