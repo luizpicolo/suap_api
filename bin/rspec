@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Read Password
+echo ""
+echo "Utilize um usuário e uma senha válida."
+echo ""
+echo -n Username:
+read username
+echo -n Password:
+read -s password
+
+
+# Run rspec
+USERNAME=$username PASSWORD=$password rspec
