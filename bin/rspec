@@ -9,6 +9,7 @@ read username
 echo -n Password:
 read -s password
 
+echo ""
 
 # Run rspec
 USERNAME=$username PASSWORD=$password rspec
