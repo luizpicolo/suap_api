@@ -1,7 +1,7 @@
 module SuapApi
   class MyData
     def self.get(connection)
-      connection.get_json_by_uri('/api/v2/minhas-informacoes/meus-dados/?format=json')
+      connection.get_json_by_uri(MY_DATA)
     end
   end
 end

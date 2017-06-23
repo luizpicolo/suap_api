@@ -1,16 +1,12 @@
 require 'spec_helper'
 
 RSpec.describe SuapApi::FrequencyOfDay do
-  describe '#get' do
+  describe '.get' do
 
     let(:json){
       connection = SuapApi::Connect.new(ENV['USERNAME'], ENV['PASSWORD'])
       SuapApi::FrequencyOfDay.get(connection)
     }
-
-    it 'should return hash', :vcr do
-      expect(json).to have_json_type(Hash)
-    end
 
     it 'should have hash with key (frequencias_hoje)', :vcr do
       expect(json).to have_json_path('frequencias_hoje')
