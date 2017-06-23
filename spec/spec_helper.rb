@@ -17,10 +17,10 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
-  config.extend VCR::RSpec::Macros
-
   VCR.configure do |config|
-    config.cassette_library_dir = "fixtures/vcr_cassettes"
+    config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
     config.hook_into :webmock
+    config.configure_rspec_metadata!
+    config.allow_http_connections_when_no_cassette = true
   end
 end
