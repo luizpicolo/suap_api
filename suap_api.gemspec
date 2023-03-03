@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.2"
   spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "rspec", "~> 3.12"
-  spec.add_development_dependency "vcr", "~> 5.0"
+  spec.add_development_dependency "vcr", "~> 6.1"
   spec.add_development_dependency "webmock", "~> 3.18"
   spec.add_dependency 'json_spec', '~> 1.1', '>= 1.1.5'
   spec.add_dependency 'mechanize', '~> 2.8', '>= 2.8.5'
