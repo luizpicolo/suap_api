@@ -2,8 +2,8 @@ require 'spec_helper'
 
 RSpec.describe SuapApi::Connect do
   describe '.get_json_by_uri' do
-    api = SuapApi::Connect.new(ENV['USERNAME'], ENV['PASSWORD'])
-
+    api = SuapApi::Connect.new(ENV['USER'], ENV['PASSWORD'])
+  
     uris = [
       SuapApi::FREQUENCY_OF_DAY,
       SuapApi::MY_DATA,
