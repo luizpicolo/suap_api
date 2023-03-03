@@ -8,6 +8,7 @@ module SuapApi
     def get_json_by_uri(uri)
       mechanize = Mechanize.new
       mechanize.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      mechanize.user_agent_alias = 'Windows Mozilla'
       page = mechanize.get(SuapApi::BASE_URL)
       form = page.forms.first
       form['username'] = @username
