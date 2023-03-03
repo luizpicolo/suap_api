@@ -41,7 +41,7 @@ Para ajudar no Desenvolvimento, clone o repositório, instale as dependências e
     $ git clone git@github.com:ifms-na/suap_api.git
     $ cd suap_api
     $ bundle install
-    $ USERNAME="usuario_siape" PASSWORD="suasenha_siape" rspec
+    $ USER="usuario_siape" PASSWORD="suasenha_siape" rspec
 
 ## License
 
